@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href = "main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src = "ajax.js"></script>
+    <title>Neganov Denis</title>
+</head>
+<body>
+    <form id = "modal">
+        <p>Задать вопрос</p>
+        <input 
+            required 
+            name = "name" 
+            type = "text"
+            placeholder = "Фамилия Имя Отчество *" 
+            pattern= ^[А-Яа-яЁё\s-]+$> <!--только русские буквы, пробелы, тире. Цифры, англ. буквы - нельзя-->
+        </input>
+        <input 
+            required 
+            type = "tel"
+            name = "phone" 
+            placeholder = "Телефон *" 
+            pattern= ^[+\d\s-]+$> <!--только цифры, “-”, пробелы, “+”-->
+        </input>
+        <input 
+            name = "email" 
+            type= "email"
+            placeholder = "Email" 
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> <!--только строки соответствующие формату email-->
+        </input>
+        <input id="btn" type="submit" value="ОТПРАВИТЬ ЗАПРОС"></input>
+    </form>
+
+    <div id = "result"></div>
+</body>
+</html>
